@@ -31,8 +31,7 @@ class MyPanel extends JPanel{
 		addKeyListener(new MyKey());
 		setFocusable(true);
 		timer.start();	
-		//тест помидора
-		
+		//тест помидора		
 		tomatos.add(new Tomato(650,250,1,1, way));
 		
 	}
