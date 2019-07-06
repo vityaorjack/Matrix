@@ -32,6 +32,7 @@ class MyPanel extends JPanel{
 		setFocusable(true);
 		timer.start();	
 		//тест помидора
+		
 		tomatos.add(new Tomato(650,250,1,1, way));
 		
 	}
