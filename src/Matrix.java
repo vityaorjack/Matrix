@@ -118,7 +118,7 @@ class Tomato{
 		this.way=way;
 	}
 	void run(){
-		//скорость движения
+		//скорость движения 
 		if(y<400){
 		width+=0.01; height+=0.01;		
 		y+=a;    a+=0.001;     
