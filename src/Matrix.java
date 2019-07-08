@@ -52,8 +52,8 @@ class MyPanel extends JPanel{
 		
 		public void actionPerformed(ActionEvent arg0) {
 			repaint();			
-			if(left){way.left();     for(Tomato tomato:tomatos)tomato.move(10); }
-			if(right){way.right();   for(Tomato tomato:tomatos)tomato.move(-10);}
+			if(left){way.left();     }
+			if(right){way.right();  }
 			//помидоры
 			for(Tomato tomato:tomatos){
 				tomato.run();
@@ -118,7 +118,7 @@ class Tomato{
 		this.way=way;
 	}
 	void run(){
-		
+		//скорость движения
 		if(y<400){
 		width+=0.01; height+=0.01;		
 		y+=a;    a+=0.001;     
@@ -126,10 +126,9 @@ class Tomato{
 			width+=0.5; height+=0.5;		
 			y+=a;    a+=0.1; 
 		}
-	}
-	void move(int map){
 		
-		x+=map*(y-250)/500; //System.out.println((y-250));
 		
+		x=(way.x[0]-200) * ((y-250)/500)  + 650; //обработка поворотов
 	}
+	
 }
